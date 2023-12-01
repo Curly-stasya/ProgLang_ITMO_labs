@@ -65,7 +65,7 @@ namespace Lab1
 		public float SumOfElementsAfterFirstPositive()
 		{
 			int j = NumberOfFirstPositiveElement();
-			if (j == -1) throw new Exception("НЕт положительных элементов в массиве");
+			if (j == -1) throw new Exception("Нет положительных элементов в массиве");
 
 			float sum = 0;
 

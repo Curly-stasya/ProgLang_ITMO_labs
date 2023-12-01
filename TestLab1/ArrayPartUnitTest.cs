@@ -43,7 +43,6 @@ public class ArrayPartTest
     [Fact]
     public void IsArrayContainsPositives()
     {
-        Debug.WriteLine("уродские тесты");
         int N = 10;
         var array = new ArrayPart(N);
         Assert.Contains(array.GetArr(), p => p > 0);
