@@ -2,9 +2,8 @@
 {
     public class Notebook
     {
-        public List<Contact> contacts { get;set; } = new List<Contact>();
+        public List<Contact> contacts { get; private set; } = new List<Contact>();
         public Notebook() { }
-
         public Notebook(NotebookDTO notebookDTO)
         {
             foreach (ContactDTO c in notebookDTO.contacts)
@@ -12,8 +11,6 @@
                 contacts.Add(new Contact(c));
             }
         }
-
-
         public IEnumerable<Contact> Search(string? selectedAction, string? info)
         {
             if(info==null) 
@@ -96,7 +93,6 @@
             return results;
 
         }
-
         public void AddNewContact(Contact contact)
         {
 

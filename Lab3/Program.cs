@@ -140,8 +140,22 @@ namespace Lab3
                                     }
 
                                     break;
-                                case "3":
-                                    break;
+                                case "3": //to SQL
+
+                                    using (var db = new MyAppDbContext())
+                                    {
+                                        db.Contacts.RemoveRange(db.Contacts);
+                                        int idSetter = 1;
+                                        db.AddRange(myNotebook.contacts.Select(c => new ContactDb() {
+                                            id = idSetter++,
+                                            name = c.name,
+                                            email = c.email,
+                                            surname = c.surname,
+                                            phone = c.phone
+                                        }));
+                                        db.SaveChanges();
+                                        break;
+                                    }
                             }
 
                             break;
@@ -168,6 +182,13 @@ namespace Lab3
                                     }
                                     break;
                                 case "3":
+                                    using (var db = new MyAppDbContext())
+                                    {
+                                        NotebookDTO myNotesDTOFromDB = new NotebookDTO();
+                                        myNotesDTOFromDB.contacts = db.Contacts.Select(c => new ContactDTO(c.name, c.surname, c.email, c.phone)).ToList();
+                                        myNotebook = new Notebook(myNotesDTOFromDB);
+                                        break;
+                                    }
                                     break;
                             }
 

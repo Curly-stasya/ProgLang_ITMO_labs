@@ -4,7 +4,6 @@
     {
         public List<ContactDTO> contacts { get; set; } = new List<ContactDTO>();
         public NotebookDTO() { }
-
         public NotebookDTO(Notebook notebookToCreateDTO)
         {
             foreach (Contact c in notebookToCreateDTO.contacts)
