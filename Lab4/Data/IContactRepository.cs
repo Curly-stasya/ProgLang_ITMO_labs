@@ -1,4 +1,6 @@
-﻿namespace Lab4.Data
+﻿using MyNotebookLib;
+
+namespace NoteBookProject.Data
 {
     public interface IContactRepository : IDisposable
     {

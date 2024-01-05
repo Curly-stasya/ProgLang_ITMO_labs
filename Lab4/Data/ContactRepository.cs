@@ -1,6 +1,7 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using MyNotebookLib;
+using Microsoft.EntityFrameworkCore;
 
-namespace Lab4.Data
+namespace NoteBookProject.Data
 {
     public class ContactRepository : IContactRepository
     {

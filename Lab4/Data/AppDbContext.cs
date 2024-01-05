@@ -1,5 +1,5 @@
-﻿using Lab4.Data;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
+using MyNotebookLib;
 
 public class AppDbContext : DbContext
 {

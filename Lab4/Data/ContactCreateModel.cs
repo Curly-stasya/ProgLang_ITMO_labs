@@ -1,4 +1,4 @@
-﻿namespace Lab4.Data
+﻿namespace NoteBookProject.Data
 {
     public class ContactCreateModel
     {

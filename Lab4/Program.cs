@@ -1,6 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Mvc;
-using Lab4.Data;
+using MyNotebookLib;
+using NoteBookProject.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 

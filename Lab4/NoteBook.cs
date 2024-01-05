@@ -1,8 +1,7 @@
-using Lab4.Data;
 using System;
 using System.Collections.Generic;
 
-namespace Lab4
+namespace MyNotebookLib
 {
     public class NoteBook
     {
